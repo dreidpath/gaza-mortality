@@ -1,4 +1,8 @@
+# Ignore R project user-specific files and data
 .Rproj.user
 .Rhistory
 .RData
 .Ruserdata
+
+# Ignore temporary files
+**/tmp.*
