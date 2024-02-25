@@ -23,7 +23,7 @@ The 1,139 people killed in Israel since October 7 should not be diminished or fo
 ## Repository Structure
 
 The repository is structured as follows:
-- `code/`: The director contains R files for reading the raw tracker data, generating modeled data and saving the data in various formats. There is also a file for generating some basic visualisations of the data.
+- `code/`: The directory contains R files for reading the raw tracker data, generating modeled data and saving the data in various formats. There is also a file for generating some basic visualisations of the data.
 - `data/`: The directory contains the raw tracker data from the Aljazeera site as well as those data in various formats with modeled data to cover periods of poorly updated information.  
 - `images/`: Directory containing visualisations generated from the data.
 
@@ -37,4 +37,4 @@ Contributions to this project are welcome. If you have suggestions for improveme
 
 ## License
 
-This project is licensed under the [Gnu Public Licence version 3](https://www.gnu.org/licenses/quick-guide-gplv3.html. Further details are available in the LICENSE file on this repository.
+This project is licensed under the [Gnu Public Licence version 3](https://www.gnu.org/licenses/quick-guide-gplv3.html). Further details are available in the LICENSE file on this repository.
