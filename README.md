@@ -42,7 +42,7 @@ number shown.  The total, however, is correctly reported.
 
 ![Image1](images/cumulative_deaths.png)
 <p align="center">
-Figure 1: Cumulative daily deaths for children, women, and men.
+**Figure 1:** Cumulative daily deaths for children, women, and men.
 </p>
 
 
@@ -51,7 +51,7 @@ with children, women and men.
 
 ![Image2](images/proportion.png)
 <p align="center">
-Figure 1: Proportion of cumulative daily deaths for children, women, and men.
+**Figure 2:** Proportion of cumulative daily deaths for children, women, and men.
 </p>
 
 
@@ -61,9 +61,9 @@ International Database. For children the rate was calculated using the populatio
 of those under 18; for women, it was the population of females 18+; the total
 mortality rate is the crude mortality rate.
 
-![Image3](images/proportion.png)
+![Image3](images/mortality_rates.png)
 <p align="center">
-Figure 3: Mortality rate.
+**Figure 3:** Mortality rate.
 </p>
 
 ## Contributing
