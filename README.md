@@ -1,10 +1,15 @@
+Tracking mortality in Palestine following Israel's assault against Gaza (2023-2024). 
+*Last updated 26 February 2024*
+
 # Gaza Conflict Tracker
 
-This repository tracks daily deaths in Palestine in the conflict between Israel and Gaza following 7 October 2023.
+This repository tracks daily deaths in Palestine in the conflict between Israel and Gaza following the attack by Hamas forces on 7 October 2023 against Israel.
 
 ## Background
 
-On 7 October 2023, the paramilitary wings of Hamas, Palestinian Islamic Jihad, PRC, PFLP, and DFLP launched a series of coordinated armed incursions into the Gaza envelope of neighboring Israeli territory. Learn more from [Wikipedia](https://en.wikipedia.org/wiki/2023_Hamas-led_attack_on_Israel).
+According to [Wikipedia](https://en.wikipedia.org/wiki/2023_Hamas-led_attack_on_Israel), on 7 October 2023, the paramilitary wings of Hamas, Palestinian Islamic Jihad, PRC, PFLP, and DFLP launched a series of coordinated armed incursions into the Gaza envelope of the neighboring Israeli territory.
+
+Israel retaliated with airstrikes in Gaza on 9 October 2023 and launched a ground invasion on 27 October 2023.
 
 ## Data Source
 
@@ -27,9 +32,39 @@ The repository is structured as follows:
 - `data/`: The directory contains the raw tracker data from the Aljazeera site as well as those data in various formats with modeled data to cover periods of poorly updated information.  
 - `images/`: Directory containing visualisations generated from the data.
 
-## Overview as of 25 February 2024
+## Overview
+
+Figure 1 is an area  plot of the cumulative daily deaths since the commencement of the 
+Gaza war. These figures are based on the modeled results from the Al Jazeera 
+reporting.  The figures for women and children reflect deaths of "at least" that
+magnitude. The deaths of men reflect deaths that are strictly less than the 
+number shown.  The total, however, is correctly reported.
+
+![Image1](images/cumulative_deaths.png)
+<p align="center">
+Figure 1: Cumulative daily deaths for children, women, and men.
+</p>
 
 
+Figure 2 is an area plot of the proportion of the cumulative daily deaths associated 
+with children, women and men.
+
+![Image2](images/proportion.png)
+<p align="center">
+Figure 1: Proportion of cumulative daily deaths for children, women, and men.
+</p>
+
+
+Figure 3 is line graph of the mortality rate (per 100,000) for women, children,
+and the total. The denominator population was obtained from the US Census Bureau's
+International Database. For children the rate was calculated using the population
+of those under 18; for women, it was the population of females 18+; the total
+mortality rate is the crude mortality rate.
+
+![Image3](images/proportion.png)
+<p align="center">
+Figure 3: Mortality rate.
+</p>
 
 ## Contributing
 
