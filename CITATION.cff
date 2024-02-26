@@ -1,0 +1,38 @@
+# This CITATION.cff file was generated with cffinit.
+# Visit https://bit.ly/cffinit to generate yours today!
+
+cff-version: 1.2.0
+title: Gaza War Mortality (2023-2024)
+message: >-
+  If you use this dataset, please cite it using the metadata
+  from this file.
+type: dataset
+authors:
+  - given-names: Daniel D.
+    family-names: Reidpath
+    orcid: 'https://orcid.org/0000-0002-8796-0420'
+    affiliation: >-
+      Institute for Global Health and Development, Queen
+      Margaret University, Scotland, UK
+identifiers:
+  - type: url
+    value: 'https://github.com/dreidpath/gaza-mortality'
+    description: GitHub repository
+#  - type: doi
+#    value: 10.5281/zenodo.XXXXX
+#    description: Zendo
+abstract: >-
+  The repository contains mortality and injury data from
+  Palestine post the start of the Israeli attack against Gaza
+  (9 October 2023). The data are sourced from the Aljazeera live tracker via
+  the Wayback Machine (archive.org). The data include
+  reported counts and model counts. Software for the
+  modeling of missing and delayed data is included in the repository.
+keywords:
+  - Israel-Gaza war
+  - mortality
+  - injury
+license: GPL-3.0
+commit: 8d10d7035334c9e1c358a28ae36ec28f14a85d4c
+version: '0.9'
+date-released: '2024-02-26'
