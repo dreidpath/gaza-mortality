@@ -69,7 +69,7 @@ p3 <- deathDF %>%
   select(day, mr_total, mr_child, mr_women) %>%
   pivot_longer(cols = c(mr_total, mr_women, mr_child),
                names_to = "group",
-               values_to = "rate") %>%
+               values_to = "rate") %>% 
   ggplot(aes(x=day, y=rate, color=group)) + 
   geom_line() +
   # Israel population 2023 https://www.macrotrends.net/countries/ISR/israel/population
@@ -79,7 +79,7 @@ p3 <- deathDF %>%
   ylab("Mortality Rate (per 100,000)") +
   xlab("Days of War") +
   scale_color_manual(name = "Group",
-                    labels = c("Total pop.", "Women (≥)", "Children (≥)"),
+                    labels = c("Children", "Total pop.", "Women (≥)"),
                     values = c("red", "purple", "orange")) +
   theme_bw()
 
