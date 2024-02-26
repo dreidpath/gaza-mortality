@@ -80,7 +80,7 @@ p3 <- deathDF %>%
   xlab("Days of War") +
   scale_color_manual(name = "Group",
                     labels = c("Total pop.", "Women (≥)", "Children (≥)"),
-                    values = c("darkred", "indianred", "pink")) +
+                    values = c("red", "purple", "orange")) +
   theme_bw()
 
 # Save ggplot as PNG in the "images" sub-folder
