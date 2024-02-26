@@ -42,7 +42,7 @@ number shown.  The total, however, is correctly reported.
 
 ![Image1](images/cumulative_deaths.png)
 <p align="center">
-**Figure 1:** Cumulative daily deaths for children, women, and men.
+<strong>Figure 1:</strong> Cumulative daily deaths for children, women, and men.
 </p>
 
 
@@ -51,7 +51,7 @@ with children, women and men.
 
 ![Image2](images/proportion.png)
 <p align="center">
-**Figure 2:** Proportion of cumulative daily deaths for children, women, and men.
+<strong>Figure 2:</strong> Proportion of cumulative daily deaths for children, women, and men.
 </p>
 
 
@@ -63,7 +63,7 @@ mortality rate is the crude mortality rate.
 
 ![Image3](images/mortality_rates.png)
 <p align="center">
-**Figure 3:** Mortality rate.
+<strong>Figure 3:</strong> Mortality rate.
 </p>
 
 ## Contributing
