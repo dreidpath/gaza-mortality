@@ -6,3 +6,6 @@
 
 # Ignore temporary files
 **/tmp.*
+
+# Ignore html files generated to check the markdown.
+**/*.html
