@@ -46,24 +46,15 @@ number shown.  The total, however, is correctly reported.
 </p>
 
 
-Figure 2 is an area plot of the proportion of the cumulative daily deaths associated 
-with children, women and men.
-
-![Image2](images/proportion.png)
-<p align="center">
-<strong>Figure 2:</strong> Proportion of cumulative daily deaths for children, women, and men.
-</p>
-
-
-Figure 3 is line graph of the mortality rate (per 100,000) for women, children,
+Figure 2 is line graph of the mortality rate (per 100,000) for women, children,
 and the total. The denominator population was obtained from the US Census Bureau's
 International Database. For children the rate was calculated using the population
 of those under 18; for women, it was the population of females 18+; the total
 mortality rate is the crude mortality rate.
 
-![Image3](images/mortality_rates.png)
+![Image2](images/mortality_rates.png)
 <p align="center">
-<strong>Figure 3:</strong> Mortality rate.
+<strong>Figure 2:</strong> Mortality rate.
 </p>
 
 ## Contributing
