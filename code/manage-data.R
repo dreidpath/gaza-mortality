@@ -40,9 +40,17 @@ deathDF$mg_daily_womendeaths <- c(deathDF$mg_dead_women[1], diff(deathDF$mg_dead
 # Clean up
 rm(list = c("lininterpol", "model_0s", "model_missing_proportions"))
 
+## Estimate the mortality rate
+
+source("code/denominators.R")
+
+deathDF$mg_mr_total <- deathDF$mg_dead_total/total_pop * 100000
+deathDF$mg_mr_child = deathDF$mg_dead_child/child_pop * 100000
+deathDF$mg_mr_women = deathDF$mg_dead_women/women_pop * 100000
+deathDF$mg_mr_men = (deathDF$mg_dead_total - deathDF$mg_dead_child - deathDF$mg_dead_women)/men_pop * 100000
+
+rm(list = c("child_pop", "men_pop", "total_pop", "women_pop"))
 
 
-
-
-
-
+saveRDS(deathDF, file = "data/gaza_data.Rds")
+haven::write_sav(deathDF, path = "data/gaza_data.sav")
