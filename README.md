@@ -1,5 +1,5 @@
 Tracking mortality in Palestine following Israel's assault against Gaza (2023-2024). 
-*Last updated 26 February 2024*
+*Last updated 29 February 2024*
 
 # Gaza Conflict Tracker
 
@@ -29,7 +29,8 @@ The 1,139 people killed in Israel since October 7 should not be diminished or fo
 
 The repository is structured as follows:
 - `code/`: The directory contains R files for reading the raw tracker data, generating modeled data and saving the data in various formats. There is also a file for generating some basic visualisations of the data.
-- `data/`: The directory contains the raw tracker data from the Aljazeera site as well as those data in various formats with modeled data to cover periods of poorly updated information.  
+- `data/`: The directory contains the raw tracker data from the Aljazeera site as well as those data in various formats with modeled data to cover periods of poorly updated information.Click [here](data/gaza_data.sav) for the stata (.sav) file, [here](data/gaza_data.Rds) for the R (.Rds) file.
+
 - `images/`: Directory containing visualisations generated from the data.
 
 ## Overview
