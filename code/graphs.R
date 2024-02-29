@@ -62,11 +62,11 @@ ggsave("images/proportion.png", plot = p2, device = "png", width = 8, height = 4
 
 #### Plot mortality rates
 p3 <- deathDF %>%
-  mutate(day = nrow(.)) %>%
+  mutate(day = 1:nrow(.)) %>%
   select(day, mg_mr_total, mg_mr_child, mg_mr_women) %>%
   pivot_longer(cols = c(mg_mr_total, mg_mr_women, mg_mr_child),
                names_to = "group",
-               values_to = "rate") %>% 
+               values_to = "rate") %>%
   ggplot(aes(x=day, y=rate, color=group)) + 
   geom_line() +
   # Israel population 2023 https://www.macrotrends.net/countries/ISR/israel/population
