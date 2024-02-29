@@ -1,5 +1,6 @@
-# Load the population figures for calculating rates
-source("code/analysis.R")
+library(tidyverse)
+# Load data
+deathDF <- readRDS("~/ownCloud/data/gaza-mortality/data/gaza_data.Rds")
 
 # Plot of the cumulative deaths of the days of the Gaza war. These are modeled
 # numbers based on Al Jazeera reporting.  The figures for women and children 
@@ -61,13 +62,9 @@ ggsave("images/proportion.png", plot = p2, device = "png", width = 8, height = 4
 
 #### Plot mortality rates
 p3 <- deathDF %>%
-  mutate(day = 1:nrow(.),
-         mr_total = mg_dead_total/total_pop * 100000,
-         mr_child = mg_dead_child/child_pop * 100000,
-         mr_women = mg_dead_women/women_pop * 100000,
-         mr_men = (mg_dead_total - mg_dead_child - mg_dead_women)/men_pop * 100000) %>%
-  select(day, mr_total, mr_child, mr_women) %>%
-  pivot_longer(cols = c(mr_total, mr_women, mr_child),
+  mutate(day = nrow(.)) %>%
+  select(day, mg_mr_total, mg_mr_child, mg_mr_women) %>%
+  pivot_longer(cols = c(mg_mr_total, mg_mr_women, mg_mr_child),
                names_to = "group",
                values_to = "rate") %>% 
   ggplot(aes(x=day, y=rate, color=group)) + 
