@@ -76,7 +76,7 @@ p3 <- deathDF %>%
   ylab("Mortality Rate (per 100,000)") +
   xlab("Days of War") +
   scale_color_manual(name = "Group",
-                    labels = c("Children", "Total pop.", "Women (≥)"),
+                    labels = c("Children (≥)", "Total pop.", "Women (≥)"),
                     values = c("red", "purple", "orange")) +
   theme_bw()
 
