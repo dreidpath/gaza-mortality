@@ -128,5 +128,48 @@ model_missing_proportions <- function(subpop_deaths, total_deaths){
   }
   
   return(proportions)
-  
 }
+
+
+
+#' Find the last position in a vector where a change occurred
+#'
+#' This function takes a vector as input and returns the index of the last element
+#' where a change in value occurred compared to the previous element.
+#'
+#' @param vec A vector of numeric or character values.
+#' @return An integer representing the index of the last element where a change occurred.
+#' @examples
+#' lastchange(c(1, 2, 2, 3, 3, 3, 4))
+#' # Returns 7
+#'
+#' lastchange(c("apple", "banana", "banana", "cherry", "cherry"))
+#' # Returns 4
+#'
+lastchange <- function(vec) {
+  # Get the length of the input vector
+  vec_length <- length(vec)
+  
+  # Initialize last_change to the length of the vector
+  # Assuming the last element might be the last change
+  last_change <- vec_length
+  
+  # Loop backwards through the vector
+  while (vec[last_change] == vec[last_change - 1]) {
+    # If the same, move to the previous element
+    last_change <- last_change - 1
+  }
+  
+  # Return the index of the last change
+  return(last_change)
+}
+
+
+# lastchange <- function(vec){
+#   vec_length <- length(vec)
+#   last_change <- vec_length
+#   while(vec[last_change] == vec[last_change-1]){
+#     last_change <- last_change - 1
+#   }
+#   return(last_change)
+# }
