@@ -24,11 +24,16 @@ deathDF$g_dead_womenx <- deathDF$g_dead_women
 last_change <- lastchange(deathDF$g_dead_womenx)
 extrapolate_prop <- deathDF$g_dead_womenx[last_change]/deathDF$g_dead_total[last_change]
 deathDF$g_dead_womenx[last_change:length(deathDF$g_dead_womenx)] <- floor(deathDF$g_dead_total[last_change:length(deathDF$g_dead_womenx)] * extrapolate_prop)
+deathDF$g_dead_womenx_flag <- 0  # Establish a flag of which data points have been extrapolated or interpolated
+deathDF$g_dead_womenx_flag[last_change:length(deathDF$g_dead_womenx)] <- 1
 # Extrapolate children's deaths  
 deathDF$g_dead_childx <- deathDF$g_dead_child
 last_change <- lastchange(deathDF$g_dead_childx)
 extrapolate_prop <- deathDF$g_dead_child[last_change]/deathDF$g_dead_total[last_change]
 deathDF$g_dead_childx[last_change:length(deathDF$g_dead_childx)] <- floor(deathDF$g_dead_total[last_change:length(deathDF$g_dead_childx)] * extrapolate_prop)
+deathDF$g_dead_childx_flag <- 0  # Establish a flag of which data points have been extrapolated or interpolated
+deathDF$g_dead_childx_flag[last_change:length(deathDF$g_dead_childx)] <- 1
+
 #clean up
 rm(list = c("extrapolate_prop", "last_change", "lastchange"))
 ###################
@@ -40,7 +45,12 @@ deathDF$g_dailydead_total <- c(deathDF$g_dead_total[1], diff(deathDF$g_dead_tota
 deathDF$mg_dailydead_total <- model_0s(deathDF$g_dailydead_total)
 # Calculate the cumulative sum of deaths
 deathDF$mg_dead_total <- cumsum(deathDF$mg_dailydead_total)
-
+# Create flags to mark which mg_dailydead_total and mg_dead_total rows are interpolated
+deathDF$mg_dailydead_total_flag <- 0
+deathDF$mg_dailydead_total_flag[which(deathDF$g_dailydead_total==0)] <- 1
+deathDF$mg_dead_total_flag <- 0
+deathDF$mg_dead_total_flag[which(deathDF$g_dailydead_total==0)] <- 1 
+  
 ## Model the child deaths (this is an "at least figure")
 # Step 1: Model the proportion of dead each day who are children
 deathDF$mg_prop_childdeaths <- model_missing_proportions(deathDF$g_dead_childx, deathDF$mg_dead_total)
