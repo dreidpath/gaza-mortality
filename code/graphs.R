@@ -83,4 +83,4 @@ p3 <- deathDF %>%
 # Save ggplot as PNG in the "images" sub-folder
 ggsave("images/mortality_rates.png", plot = p3, device = "png", width = 8, height = 4.5)
 
-  
+rm(list = c("p1", "p2", "p3"))
