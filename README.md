@@ -1,5 +1,5 @@
 Tracking mortality in Palestine following Israel's assault against Gaza (2023-2024). 
-*Last updated 21 April 2024*
+*Last updated 22 April 2024*
 
 # Gaza Conflict Tracker
 
